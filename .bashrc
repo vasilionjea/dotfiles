@@ -47,6 +47,13 @@ alias lsa="ls -aF"
 alias lsd='ls -l ${colorflag} | grep "^d"'
 
 
+# Open programs
+alias chrome='open /Applications/Google\ Chrome.app/'
+alias firefox='open /Applications/Firefox.app/'
+alias itunes='open /Applications/iTunes.app/'
+alias skype='open /Applications/Skype.app/'
+
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias iplocal="ipconfig getifaddr en1"
@@ -54,6 +61,15 @@ alias iplocal="ipconfig getifaddr en1"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
+
+
+# Get web server headers
+# e.g. `headers istocode.com`
+alias headers='curl -I'
+
+
+# Find out if remote server supports gzip / mod_deflate or not
+alias gzipheaders='curl -I --compress'
 
 
 # Show/hide hidden files in Finder
@@ -66,7 +82,7 @@ alias finder_hide="defaults write com.apple.finder AppleShowAllFiles -bool false
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
 
-# Instead of `alias`es I could extend the CDPATH (* where the `cd` command looks for directories)
+# Instead of `alias`ing I could extend the CDPATH (* where the `cd` command looks for directories)
 # This allows us to still use the `cd` command - in the alias you put the cd as part of the variable's value
 CDPATH=$CDPATH:$HOME/Documents/localhost # `cd any-directory` now works!
 
