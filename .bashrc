@@ -55,20 +55,22 @@ alias skype='open /Applications/Skype.app/'
 
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias iplocal="ipconfig getifaddr en1"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com" # External IP
+alias iplocal="ipconfig getifaddr en1" # Local IP
 
 
 # Enhanced WHOIS lookups
+# Usage: `whois istocode.com`
 alias whois="whois -h whois-servers.net"
 
 
 # Get web server headers
-# e.g. `headers istocode.com`
+# Usage: `headers istocode.com`
 alias headers='curl -I'
 
 
 # Find out if remote server supports gzip / mod_deflate or not
+# Usage: `gzipheaders istocode.com`
 alias gzipheaders='curl -I --compress'
 
 
@@ -83,8 +85,8 @@ alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 
 
 # Instead of `alias`ing I could extend the CDPATH (* where the `cd` command looks for directories)
-# This allows us to still use the `cd` command - in the alias you put the cd as part of the variable's value
-CDPATH=$CDPATH:$HOME/Documents/localhost # `cd any-directory` now works!
+# Usage: `cd any-directory`
+CDPATH=$CDPATH:$HOME/Documents/localhost
 
 
 # Added by the Heroku Toolbelt
